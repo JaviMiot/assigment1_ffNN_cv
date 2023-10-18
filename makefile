@@ -19,6 +19,7 @@ build:
 
 .PHONY: run
 run:
+	module load TensorFlow/2.6.0-foss-2021a-CUDA-11.3.1 && \
 	sbatch job.sh
 
 .PHONY: list
