@@ -25,3 +25,12 @@ run:
 list:
 	squeue
 
+
+.PHONY: load_data
+load_data:
+	ln -s /home/v839/PROJECT/xview_test/ &&
+	ln -s /home/v839/PROJECT/xview_train/ 
+
+.PHONY: dashboard-view
+	dashboard:
+	ssh -L 4000:127.0.0.1:6006 v839330@magerit.cesvima.upm.es
