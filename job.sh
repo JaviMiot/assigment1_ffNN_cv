@@ -1,7 +1,7 @@
 #!/bin/bash
 ##----------------------- Start job description -----------------------
 #SBATCH --job-name=example
-#SBATCH --time=07:00:00
+#SBATCH --time=10:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=standard-gpu

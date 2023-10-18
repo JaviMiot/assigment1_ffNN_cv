@@ -2,9 +2,11 @@ javi*
 test**
 logs**
 xview_recognition.zip
-xview_test/
-xview_train/
+xview_test
+xview_train
 conda/
 .vscode/
 slurm**
 miniconda.sh
+file.py
+model.**
