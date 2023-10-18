@@ -32,6 +32,15 @@ load_data:
 	ln -s /home/v839/PROJECT/xview_test/ &&
 	ln -s /home/v839/PROJECT/xview_train/ 
 
+.PHONY: dashboard_init
+dashboard_init:
+	module load TensorFlow/2.6.0-foss-2021a-CUDA-11.3.1 && \
+	tensorboard --logdir=logs 
+
 .PHONY: dashboard-view
-	dashboard:
+dashboard-view:
 	ssh -L 4000:127.0.0.1:6006 v839330@magerit.cesvima.upm.es
+
+.PHONY: get_logs
+get_logs:
+	scp -r v839330@magerit.cesvima.upm.es:/home/v839/v839330/nn/logs 'G:\My Drive\2. Capacitaciones\Máster IA\Computer Vision\Assigments\Assigment 2\logs_remote'
